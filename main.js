@@ -20,6 +20,7 @@ let revertAtTop = _ => {
   }
 }
 
+//This is the bad thing to do
 setInterval(() => {
   if (window.pageYOffset > 0)
     shrinkAtTop()
