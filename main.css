@@ -35,6 +35,31 @@ body{
   transition: .75s;
 }
 
+#nav-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 5vh;
+  grid-template-columns: repeat(5, 20%);
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: ". . . . quote";
+}
+
+#nav-grid button{
+  padding: 2px;
+  border: .1px solid #004c94;
+  border-radius: 12px;
+  background-color: #004c94;
+  color: #fff;
+  padding: 2% 5%;
+  font-size: .5em;
+}
+
+#nav-grid #quote {
+  grid-area: quote;
+}
+
+
 #logo {
   position: absolute;
   height: 50%;
