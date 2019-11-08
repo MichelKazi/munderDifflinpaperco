@@ -2,11 +2,57 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
-  margin: 0;
+body::-webkit-scrollbar {
+  width: 10px;
 }
 
-#top-section {
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+
+}
+
+body{
+  font
+  margin: 0;
+  transition: .75s;
+  font-family: 'open sans';
+  background-color: #333;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width:100%;
   background-color: #ccc;
-  padding: 10%;
+  transition: .75s;
+}
+
+#logo {
+  position: absolute;
+  height: 50%;
+  left: 40%;
+  top: 78.7%;
+  width: auto;
+  transition: .67s
+}
+
+#content-grid {
+  margin-top: 40%;
+  display: grid;
+  grid-template: 60vh / 33% 33% 33%;
+  align-items: center;
+  justify-items: center;
+}
+
+#content-grid p {
+  height: 100px;
+  width: 100px;
 }

@@ -1,2 +1,1 @@
-# munderDifflinpaperco
-<h1>Munder Difflin Paper</h1>
+<h1>Munder Difflin Paper Co</h1>
