@@ -30,7 +30,9 @@ body{
   width: 1px;
 }
 
-#nav {
+/* --------------------NAVBAR--------------------- */
+/* Big Navbar */
+.nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,41 +40,107 @@ body{
   width:100%;
   background-color: #555555;
   transition: .75s;
+  z-index: 0;
 }
-
-#nav-grid {
+/* Shrunk Navbar */
+.nav-shrunk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width:100%;
+  background-color: #555555;
+  transition: .75s;
+}
+/* Navbar button grid */
+.nav-grid {
+  margin-top: 20%;
+  display: grid;
+  grid-template-rows: 5vh;
+  grid-template-columns: 15% 15% 11.5% 15% 15%;
+  grid-column-gap: 7%;
+  /* justify-content: space-between; */
+  /* grid-template-columns: repeat(9, 11%); */
+  /* align-items: center;
+  justify-items: center; */
+  grid-template-areas: ". . . contact quote";
+  transition: .75s;
+  z-index: 2;
+}
+/* Shrunk navbar button grid */
+.nav-grid-shrunk {
+  width: 100;
+  z-index: 2;
   margin-top: 10px;
   display: grid;
   grid-template-rows: 5vh;
-  grid-template-columns: repeat(5, 20%);
-  align-items: center;
-  justify-items: center;
-  grid-template-areas: ". . . . quote";
+  grid-template-columns: 15% 15% 11.5% 15% 15%;
+  grid-column-gap: 7%;
+  /* justify-content: space-between; */
+  /* align-items: center;
+  justify-items: center; */
+  grid-template-areas: ". . . contact quote";
+  transition: .75s;
 }
-
-#nav-grid button{
-  padding: 2px;
-  border: .1px solid #004c94;
-  border-radius: 12px;
-  background-color: #004c94;
+/* Nav button */
+.nav-btn{
+  z-index: 2;
+  width: 80%;
+  margin: 1%;
+  border: 1px solid #e65400;
+  border-radius: 7px;
+  background-color: #e65400;
   color: #fff;
-  padding: 2% 5%;
-  font-size: .5em;
+  font-size: 7px;
+  transition: .75s;
+}
+/* Shrunk nav buttpn */
+.nav-btn-shrunk{
+  z-index: 2;
+  width: 80%;
+  margin: 1%;
+  border: .1px solid #e65400;
+  border-radius: 7px;
+  background-color: #e65400;
+  color: #fff;
+  font-size: 7px;
+  transition: .75s;
 }
 
-#nav-grid #quote {
+
+
+
+/* Buttons */
+#quote  {
   grid-area: quote;
 }
 
+#contact-us {
+  grid-area: contact;
+}
 
-#logo {
+/* Logo */
+.logo {
   position: absolute;
   height: 50%;
   left: 40%;
   top: 78.7%;
   width: auto;
-  transition: .67s
+  transition: .67s;
 }
+/* Shrunk logo */
+.logo-shrunk {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  height: 70%;
+  width: auto;
+  filter: brightness(75%);
+  transition: .67s;
+  grid-area: logo
+}
+
+/* -------------------Content Grid----------------- */
 
 #content-grid {
   margin-top: 40%;
