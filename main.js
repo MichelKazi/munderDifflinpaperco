@@ -1,32 +1,26 @@
 let navbar = document.getElementById('nav')
 let logo = document.getElementById('logo')
-let navGrid = document.getElementById('nav-items')
+let navGrid = document.getElementById('nav-grid')
 let navbtn = document.getElementsByClassName('btn')
-let quote = document.getElementById('quote')
-let contactUs = document.getElementById('contact-us')
 
 let intersect = document.getElementById('intersection-point')
 
 let shrinkAtTop = _ => {
   navbar.classList.replace('nav', 'nav-shrunk')
-  navbar.appendChild(logo)
   logo.classList.replace('logo', 'logo-shrunk')
-  navGrid.classList.replace('nav-items', 'nav-items-shrunk')
+  navGrid.classList.replace('nav-grid', 'nav-grid-shrunk')
   for (b of navbtn){
     b.classList.replace('nav-btn', 'nav-btn-shrunk')
   }
-
 }
 
 let revertAtTop = _ => {
   navbar.classList.replace('nav-shrunk', 'nav')
-  document.body.appendChild(logo)
   logo.classList.replace('logo-shrunk', 'logo')
-  navGrid.classList.replace('nav-items-shrunk', 'nav-items')
+  navGrid.classList.replace('nav-grid-shrunk', 'nav-grid')
   for (b of navbtn){
     b.classList.replace('nav-btn-shrunk', 'nav-btn')
   }
-
 }
 
 let resizer = new IntersectionObserver((entries) => {

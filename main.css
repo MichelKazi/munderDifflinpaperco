@@ -22,36 +22,25 @@ body{
   margin: 0;
   transition: .75s;
   font-family: 'open sans';
-  background-color: #0F1A26;
-  color: #fff;
+  background-color: #333;
 }
 
 #intersection-point {
-  height: .5px;
-  width: .5px;
-  margin-top: 10%;
+  height: 1px;
+  width: 1px;
 }
 
 /* --------------------NAVBAR--------------------- */
 /* Big Navbar */
-#top-background {
-  position: absolute;
+.nav {
+  position: fixed;
   top: 0;
   left: 0;
   height: 40%;
   width:100%;
-  background-color: #023a66;
-  z-index: -1;
-}
-.nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 10%;
-  width:100%;
-  background-color: #023a66;
-  z-index: 0;
+  background-color: #555555;
   transition: .75s;
+  z-index: 0;
 }
 /* Shrunk Navbar */
 .nav-shrunk {
@@ -60,30 +49,46 @@ body{
   left: 0;
   height: 10%;
   width:100%;
-  background-color: #023a66;
+  background-color: #555555;
   transition: .75s;
 }
 /* Navbar button grid */
-.nav-items {
-  top: 130%;
+.nav-grid {
+  margin-top: 20%;
+  display: grid;
+  grid-template-rows: 5vh;
+  grid-template-columns: 15% 15% 11.5% 15% 15%;
+  grid-column-gap: 7%;
+  /* justify-content: space-between; */
+  /* grid-template-columns: repeat(9, 11%); */
+  /* align-items: center;
+  justify-items: center; */
+  grid-template-areas: ". . . contact quote";
   transition: .75s;
+  z-index: 2;
 }
 /* Shrunk navbar button grid */
-.nav-items-shrunk {
-  top: 3%;
+.nav-grid-shrunk {
+  width: 100;
+  z-index: 2;
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 5vh;
+  grid-template-columns: 15% 15% 11.5% 15% 15%;
+  grid-column-gap: 7%;
+  /* justify-content: space-between; */
+  /* align-items: center;
+  justify-items: center; */
+  grid-template-areas: ". . . contact quote";
   transition: .75s;
 }
 /* Nav button */
-
 .nav-btn{
   z-index: 2;
-  padding: 1% 0;
+  width: 80%;
   margin: 1%;
-  width: 9.9%;
-  border: .1px solid #e65400;
-  border-radius: 5px;
-  box-shadow: 0px 2.3px 0px #af480d, 0px 3px 15px rgba(0,0,0,.4);
-  outline: none;
+  border: 1px solid #e65400;
+  border-radius: 7px;
   background-color: #e65400;
   color: #fff;
   font-size: 7px;
@@ -91,15 +96,11 @@ body{
 }
 /* Shrunk nav buttpn */
 .nav-btn-shrunk{
-  float: right;
   z-index: 2;
-  padding: 1% 0%;
+  width: 80%;
   margin: 1%;
-  width: 9.9%;
   border: .1px solid #e65400;
-  border-radius: 5px;
-  box-shadow: 0px 1.4px 0px #af480d, 0px 3px 15px rgba(0,0,0,.4);
-  outline: none;
+  border-radius: 7px;
   background-color: #e65400;
   color: #fff;
   font-size: 7px;
@@ -107,62 +108,42 @@ body{
 }
 
 
-.nav-btn:active {
-  top: 4px;
-  box-shadow: 0px 0px 0px #af480d;
-}
-
-.nav-btn-shrunk:active {
-  top: 4px;
-  box-shadow: 0px 0px 0px #af480d;
-}
 
 
 /* Buttons */
 #quote  {
-
+  grid-area: quote;
 }
 
 #contact-us {
-
+  grid-area: contact;
 }
 
 /* Logo */
 .logo {
-  z-index: 2;
   position: absolute;
-  height: 41%;
-  left: 29%;
-  top: 22.7%;
+  height: 50%;
+  left: 40%;
+  top: 78.7%;
   width: auto;
   transition: .67s;
 }
 /* Shrunk logo */
 .logo-shrunk {
-  z-index: 2;
-  position: fixed;
-  left: 4%;
-  top: 6%;
-  height: 90%;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  height: 70%;
   width: auto;
   filter: brightness(75%);
   transition: .67s;
   grid-area: logo
 }
 
-/* ---------------------Greeting------------------- */
-
-#greeting{
-  margin-top: 30%;
-}
-
-#greeting p {
-  font-size: .75em;
-}
-
 /* -------------------Content Grid----------------- */
 
 #content-grid {
+  margin-top: 40%;
   display: grid;
   grid-template: 60vh / 33% 33% 33%;
   align-items: center;
