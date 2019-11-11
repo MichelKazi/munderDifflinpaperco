@@ -1,4 +1,4 @@
-let navbar = document.getElementById('nav')
+let nav = document.getElementById('nav')
 let logo = document.getElementById('logo')
 let navItems = document.getElementById('nav-items')
 let greeting = document.getElementById('greeting')
@@ -7,13 +7,13 @@ let quote = document.getElementById('quote')
 let intersect = document.getElementById('intersection-point')
 
 let shrinkAtTop = _ => {
-  navbar.classList.replace('nav', 'nav-shrunk')
+  nav.classList.replace('nav', 'nav-shrunk')
   logo.classList.replace('logo', 'logo-shrunk')
 }
 
 
 let revertAtTop = _ => {
-  navbar.classList.replace('nav-shrunk', 'nav')
+  nav.classList.replace('nav-shrunk', 'nav')
   logo.classList.replace('logo-shrunk', 'logo')
 }
 

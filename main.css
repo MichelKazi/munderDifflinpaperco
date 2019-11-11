@@ -23,6 +23,7 @@ body{
   font-family: 'open sans';
   background-color: #02252f;
   color: #fff;
+  font-size: 16px;
 }
 
 #intersection-point {
@@ -38,7 +39,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  height: 40%;
+  height: 40vh;
   width:100%;
   background-color: #043442;
   transition: .75s;
@@ -49,7 +50,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  height: 10%;
+  height: 10vh;
   width:100%;
   background-color: #043442;
   box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.36);
@@ -93,9 +94,7 @@ body{
 }
 
 @keyframes pop-in {
-0% { opacity: 0; transform: scale(0.5); }
-50% { opacity: .5 transform: scale(1.5) }
-100% { opacity: 1; transform: scale(1); }
+50%  {transform: scale(1.2  );}
 }
 @keyframes slide-from-right {
   0% { transform: translateX(100%); }
@@ -114,39 +113,36 @@ body{
 
 /* Logo */
 .logo {
-  position: absolute;
-  height: 74%;
-  left: 35%;
-  top: 69.7%;
-  width: auto;
   transition: .67s;
+  display: block;
+  height: 50%;
+  margin: 29.34vh auto 0;
 }
 /* Shrunk logo */
 .logo-shrunk {
-  position: absolute;
-  left: 45.43%;
-  top: 17%;
-  height: 96%;
-  width: auto;
+  transition: .67s;
+  display: block;
+  height: 91%;
+  margin: 2.34vh auto 0;
   filter: brightness(75%);
   transition: .67s;
-  grid-area: logo
 }
 
 /* -------------------Content Grid----------------- */
 
 #greeting {
-  width: 75%;
-  margin: 0 auto;
-  padding-top: 30%;
-  padding-left: 10%;
-  padding-bottom: 11%;
-  transition: .75s;
+  width: 75vw;
+  margin: 68vh auto 0;
 }
 
 #greeting p{
   font-size: .45em;
   margin: 0 auto;
+}
+
+#greeting #disc {
+  padding-top: 5vh;
+  font-size: .2em;
 }
 
 #content-grid {
