@@ -73,65 +73,12 @@ body{
   z-index: -2;
   width: fit-content;
   margin: 1%;
-  border: 1px solid #be023d;
+  border: .25px solid #be023d;
   border-radius: 7px;
-  background-color: #be023d;
-  color: #fff;
+  color: #7aadbb;
   font-size: 7px;
 }
 
-/* Buttons */
-#quote-box {
-  margin: 0 auto;
-}
-#quote-box div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1%;
-}
-#quote-box input {
-  background-color: #2b3b40;
-    margin: .9% 0 .9% auto;
-    display: block;
-    border: .5px solid #233542;
-    border-radius: 2.5px;
-    font-size: .2em;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-#quote  {
-  display: block;
-  margin-right: auto;
-  font-size: .2em;
-  transition: .7s;
-}
-
-.quote-anim {
-  animation: pop-in 0.5s;
-}
-.grid-quote-anim {
-  animation: slide-from-right .5s;
-}
-
-@keyframes pop-in {
-50%  {transform: scale(1.2  );}
-}
-@keyframes slide-from-right {
-  0% { transform: translateX(100%); }
-  50% { transform: translateX(-40%); }
-  100% { transform: translateX(0%); }
-}
-
-
-.grid-quote{
-  position: fixed;
-  z-index: 2;
-  bottom: 91%;
-  right: 4%;
-  font-size: 4.5px;
-  animation: slide-from-right .5s;
-}
 
 /* Logo */
 .logo {
@@ -150,7 +97,66 @@ body{
   transition: .67s;
 }
 
-/* -------------------Content Grid----------------- */
+/* -------------------Homepage----------------- */
+/* Buttons */
+#quote-box {
+  margin: 0 auto;
+  padding-bottom: 3.33vh;
+}
+#quote-box div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+#quote-box input {
+  background-color: #2b3b40;
+  margin: .9% 0 .9% auto;
+  display: block;
+  border: .5px solid #233542;
+  border-radius: 2.5px;
+  font-size: .2em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#quote  {
+  background-color: #be023d;
+  display: block;
+  margin-right: auto;
+  font-size: .2em;
+  transition: .7s;
+  outline: none;
+}
+
+#quote:hover {
+  background-color: #be023d;
+}
+
+.quote-anim {
+  animation: pop-in 0.5s;
+}
+.grid-quote-anim {
+  animation: slide-from-right .5s;
+}
+
+@keyframes pop-in {
+  50%  {transform: scale(1.2  );}
+}
+@keyframes slide-from-right {
+  0% { transform: translateX(100%); }
+  50% { transform: translateX(-40%); }
+  100% { transform: translateX(0%); }
+}
+
+
+.grid-quote{
+  position: fixed;
+  z-index: 2;
+  bottom: 91%;
+  right: 4%;
+  font-size: 4.5px;
+  animation: slide-from-right .5s;
+}
 
 #greeting {
   width: 75vw;
@@ -168,15 +174,16 @@ body{
   font-size: .3em;
 }
 
-#content-grid {
-  margin-top: 40%;
-  display: grid;
-  grid-template: 60vh / 33% 33% 33%;
-  align-items: center;
-  justify-items: center;
+/* ---------------------Products----------------------- */
+
+#products {
+
 }
 
-#content-grid p {
-  height: 100px;
-  width: 100px;
+
+#product-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 25vh) / repeat(2, 35vh);
+  grid-gap: 3vh;
 }

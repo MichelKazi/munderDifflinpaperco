@@ -27,6 +27,12 @@ let resizer = new IntersectionObserver((entries) => {
 })
 resizer.observe(intersect)
 
+quote.addEventListener('mouseover', _ => {
+  quote.style.backgroundColor = '#be023d'
+})
+quote.addEventListener('mouseout', _ => {
+  quote.style.backgroundColor = 'transparent'
+})
 
 let quoteToGrid = new IntersectionObserver((entries) => {
   const [ el ] = entries
@@ -36,6 +42,7 @@ let quoteToGrid = new IntersectionObserver((entries) => {
     quote.style.right = '13%'
     quote.style.fontSize = '.2em'
     quote.style.zIndex = '2'
+    quote.style.backgroundColor = 'transparent'
     quote.style.animation = 'none';
     quote.offsetHeight; /* trigger reflow */
     quote.style.animation = 'slide-from-right .63s';
@@ -46,6 +53,7 @@ let quoteToGrid = new IntersectionObserver((entries) => {
     quote.style.zIndex = ''
     quote.style.right = ''
     quote.style.fontSize = ''
+    quote.style.backgroundColor = ''
     quote.style.animation = 'none';
     quote.offsetHeight; /* trigger reflow */
     quote.style.animation = 'pop-in .5s';
@@ -53,10 +61,3 @@ let quoteToGrid = new IntersectionObserver((entries) => {
 })
 
 quoteToGrid.observe(greeting)
-
-quote.addEventListener('mouseover', _ => {
-  quote.style.fontSize = '.25em'
-})
-quote.addEventListener('mouseout', _ => {
-  quote.style.fontSize = ''
-})
