@@ -38,7 +38,7 @@ let quoteToGrid = new IntersectionObserver((entries) => {
     quote.style.zIndex = '2'
     quote.style.animation = 'none';
     quote.offsetHeight; /* trigger reflow */
-    quote.style.animation = 'slide-from-right .5s';
+    quote.style.animation = 'slide-from-right .63s';
   }
   else {
     quote.style.position = ''

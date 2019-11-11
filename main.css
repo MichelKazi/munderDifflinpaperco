@@ -98,6 +98,7 @@ body{
 }
 @keyframes slide-from-right {
   0% { transform: translateX(100%); }
+  50% { transform: translateX(-40%); }
   100% { transform: translateX(0%); }
 }
 
@@ -133,6 +134,7 @@ body{
 #greeting {
   width: 75vw;
   margin: 68vh auto 0;
+  text-align: center;
 }
 
 #greeting p{
@@ -141,7 +143,7 @@ body{
 }
 
 #greeting #disc {
-  padding-top: 5vh;
+  padding: 2.5vh;
   font-size: .2em;
 }
 
