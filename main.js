@@ -32,7 +32,7 @@ let quoteToGrid = new IntersectionObserver((entries) => {
   const [ el ] = entries
   if (!el.isIntersecting) {
     quote.style.position = 'fixed'
-    quote.style.bottom = '91%'
+    quote.style.top = '1%'
     quote.style.right = '13%'
     quote.style.fontSize = '.2em'
     quote.style.zIndex = '2'
