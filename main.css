@@ -30,7 +30,7 @@ body{
   position: absolute;
   height: 1px;
   width: 1px;
-  top: 7.75%;
+  top: .75%;
 }
 
 /* --------------------NAVBAR--------------------- */
@@ -81,9 +81,30 @@ body{
 }
 
 /* Buttons */
+#quote-box {
+  margin: 0 auto;
+}
+#quote-box div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+#quote-box input {
+  background-color: #2b3b40;
+    margin: .9% 0 .9% auto;
+    display: block;
+    border: .5px solid #233542;
+    border-radius: 2.5px;
+    font-size: .2em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 #quote  {
   display: block;
-  margin: 0 auto;
+  margin-right: auto;
+  font-size: .2em;
+  transition: .7s;
 }
 
 .quote-anim {
@@ -133,18 +154,18 @@ body{
 
 #greeting {
   width: 75vw;
-  margin: 68vh auto 0;
+  margin: 54vh auto 0;
   text-align: center;
 }
 
-#greeting p{
-  font-size: .45em;
+#greeting h1{
+  font-size: .55em;
   margin: 0 auto;
 }
 
 #greeting #disc {
   padding: 2.5vh;
-  font-size: .2em;
+  font-size: .3em;
 }
 
 #content-grid {

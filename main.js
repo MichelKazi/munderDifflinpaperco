@@ -32,7 +32,7 @@ let quoteToGrid = new IntersectionObserver((entries) => {
   const [ el ] = entries
   if (!el.isIntersecting) {
     quote.style.position = 'fixed'
-    quote.style.bottom = '93%'
+    quote.style.bottom = '91%'
     quote.style.right = '13%'
     quote.style.fontSize = '.2em'
     quote.style.zIndex = '2'
@@ -53,3 +53,10 @@ let quoteToGrid = new IntersectionObserver((entries) => {
 })
 
 quoteToGrid.observe(greeting)
+
+quote.addEventListener('mouseover', _ => {
+  quote.style.fontSize = '.25em'
+})
+quote.addEventListener('mouseout', _ => {
+  quote.style.fontSize = ''
+})
