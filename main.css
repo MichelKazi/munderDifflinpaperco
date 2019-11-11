@@ -26,8 +26,9 @@ body{
 }
 
 #intersection-point {
-  height: 1px;
-  width: 1px;
+  height: .5px;
+  width: .5px;
+  margin-top: 10%;
 }
 
 /* --------------------NAVBAR--------------------- */
@@ -53,70 +54,68 @@ body{
   transition: .75s;
 }
 /* Navbar button grid */
-.nav-grid {
-  margin-top: 20%;
-  display: grid;
-  grid-template-rows: 5vh;
-  grid-template-columns: 15% 15% 11.5% 15% 15%;
-  grid-column-gap: 7%;
-  /* justify-content: space-between; */
-  /* grid-template-columns: repeat(9, 11%); */
-  /* align-items: center;
-  justify-items: center; */
-  grid-template-areas: ". . . contact quote";
-  transition: .75s;
-  z-index: 2;
+.nav-items {
+  position: relative;
 }
 /* Shrunk navbar button grid */
-.nav-grid-shrunk {
-  width: 100;
-  z-index: 2;
-  margin-top: 10px;
-  display: grid;
-  grid-template-rows: 5vh;
-  grid-template-columns: 15% 15% 11.5% 15% 15%;
-  grid-column-gap: 7%;
-  /* justify-content: space-between; */
-  /* align-items: center;
-  justify-items: center; */
-  grid-template-areas: ". . . contact quote";
-  transition: .75s;
+.nav-items-shrunk {
+  position: relative;
 }
 /* Nav button */
 .nav-btn{
+  position: absolute;
   z-index: 2;
-  width: 80%;
+  padding: 1% 2%;
+  top: 135%;
   margin: 1%;
-  border: 1px solid #e65400;
-  border-radius: 7px;
+  width: 12.9%;
+  border: .1px solid #e65400;
+  border-radius: 5px;
+  box-shadow: 0px 2.3px 0px #af480d, 0px 3px 15px rgba(0,0,0,.4);
+  outline: none;
   background-color: #e65400;
   color: #fff;
   font-size: 7px;
-  transition: .75s;
+  transition: .5s;
 }
 /* Shrunk nav buttpn */
 .nav-btn-shrunk{
+  position: absolute;
   z-index: 2;
-  width: 80%;
+  padding: .25% .5%;
+  top: 15%;
   margin: 1%;
   border: .1px solid #e65400;
-  border-radius: 7px;
+  border-radius: 5px;
+  box-shadow: 0px 1.4px 0px #af480d, 0px 3px 15px rgba(0,0,0,.4);
+  outline: none;
   background-color: #e65400;
   color: #fff;
   font-size: 7px;
-  transition: .75s;
+  transition: .5s;
 }
 
 
+.nav-btn:active {
+  top: 4px;
+  box-shadow: 0px 0px 0px #af480d;
+}
+
+.nav-btn-shrunk:active {
+  top: 4px;
+  box-shadow: 0px 0px 0px #af480d;
+}
 
 
 /* Buttons */
 #quote  {
   grid-area: quote;
+  left: 35.5%;
 }
 
 #contact-us {
   grid-area: contact;
+  left: 53.5%;
 }
 
 /* Logo */
@@ -143,7 +142,7 @@ body{
 /* -------------------Content Grid----------------- */
 
 #content-grid {
-  margin-top: 40%;
+  margin-top: 33%;
   display: grid;
   grid-template: 60vh / 33% 33% 33%;
   align-items: center;
