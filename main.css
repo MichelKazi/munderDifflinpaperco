@@ -82,10 +82,10 @@ body{
 
 /* Buttons */
 #quote  {
-  position: absolute;
-  bottom: 5%;
-  right: 41%;
+  display: block;
+  margin: 0 auto;
 }
+
 .quote-anim {
   animation: pop-in 0.5s;
 }

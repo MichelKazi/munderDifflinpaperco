@@ -32,9 +32,9 @@ let quoteToGrid = new IntersectionObserver((entries) => {
   const [ el ] = entries
   if (!el.isIntersecting) {
     quote.style.position = 'fixed'
-    quote.style.bottom = '91%'
-    quote.style.right = '4%'
-    quote.style.fontSize = '4.5px'
+    quote.style.bottom = '93%'
+    quote.style.right = '13%'
+    quote.style.fontSize = '.2em'
     quote.style.zIndex = '2'
     quote.style.animation = 'none';
     quote.offsetHeight; /* trigger reflow */
