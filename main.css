@@ -3,7 +3,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 2px;
 }
 
 body::-webkit-scrollbar-track {
@@ -29,7 +29,7 @@ body{
   position: absolute;
   height: 1px;
   width: 1px;
-  top: 10%;
+  top: 7.75%;
 }
 
 /* --------------------NAVBAR--------------------- */
@@ -55,63 +55,69 @@ body{
   box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.36);
   transition: .75s;
 }
-/* Navbar button grid */
-.nav-grid {
-  margin-top: 20%;
-  display: grid;
-  grid-template-rows: 5vh;
-  grid-template-columns: 15% 15% 11.5% 15% 15%;
-  grid-column-gap: 7%;
-  /* justify-content: space-between; */
-  /* grid-template-columns: repeat(9, 11%); */
-  /* align-items: center;
-  justify-items: center; */
-  grid-template-areas: ". . . contact quote";
-  transition: .75s;
-  z-index: 2;
+
+#nav-items ul {
+  list-style: none;
+  display: inline;
 }
-/* Shrunk navbar button grid */
-.nav-grid-shrunk {
-  width: 100;
-  z-index: 2;
-  margin-top: 10px;
-  display: grid;
-  grid-template-rows: 5vh;
-  grid-template-columns: 15% 15% 11.5% 15% 15%;
-  grid-column-gap: 7%;
-  /* justify-content: space-between; */
-  /* align-items: center;
-  justify-items: center; */
-  grid-template-areas: ". . . contact quote";
-  transition: .75s;
+#nav-items ul li{
+  width: 10%;
+  margin: 0;
+  font-size: 12px;
 }
+
+
 /* Nav button */
 .nav-btn{
-  z-index: 2;
-  width: 11%;
+  z-index: -2;
+  width: fit-content;
   margin: 1%;
   border: 1px solid #be023d;
   border-radius: 7px;
   background-color: #be023d;
   color: #fff;
   font-size: 7px;
-  transition: .75s;
 }
 
 /* Buttons */
 #quote  {
   position: absolute;
-  bottom: 25%;
-  right: 21%;
+  bottom: 5%;
+  right: 41%;
+}
+.quote-anim {
+  animation: pop-in 0.5s;
+}
+.grid-quote-anim {
+  animation: slide-from-right .5s;
 }
 
+@keyframes pop-in {
+0% { opacity: 0; transform: scale(0.5); }
+50% { opacity: .5 transform: scale(1.5) }
+100% { opacity: 1; transform: scale(1); }
+}
+@keyframes slide-from-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+
+.grid-quote{
+  position: fixed;
+  z-index: 2;
+  bottom: 91%;
+  right: 4%;
+  font-size: 4.5px;
+  animation: slide-from-right .5s;
+}
 
 /* Logo */
 .logo {
   position: absolute;
-  height: 50%;
-  left: 40%;
-  top: 78.7%;
+  height: 74%;
+  left: 35%;
+  top: 69.7%;
   width: auto;
   transition: .67s;
 }
@@ -130,12 +136,17 @@ body{
 /* -------------------Content Grid----------------- */
 
 #greeting {
-  padding: 40% 20% 11%;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 30%;
+  padding-left: 10%;
+  padding-bottom: 11%;
   transition: .75s;
 }
 
 #greeting p{
-  font-size: .75em;
+  font-size: .45em;
+  margin: 0 auto;
 }
 
 #content-grid {

@@ -1,21 +1,20 @@
 let navbar = document.getElementById('nav')
 let logo = document.getElementById('logo')
-let navGrid = document.getElementById('nav-grid')
-let navbtn = document.getElementsByClassName('btn')
+let navItems = document.getElementById('nav-items')
+let greeting = document.getElementById('greeting')
+let quote = document.getElementById('quote')
 
 let intersect = document.getElementById('intersection-point')
 
 let shrinkAtTop = _ => {
   navbar.classList.replace('nav', 'nav-shrunk')
   logo.classList.replace('logo', 'logo-shrunk')
-  navGrid.classList.replace('nav-grid', 'nav-grid-shrunk')
 }
 
 
 let revertAtTop = _ => {
   navbar.classList.replace('nav-shrunk', 'nav')
   logo.classList.replace('logo-shrunk', 'logo')
-  navGrid.classList.replace('nav-grid-shrunk', 'nav-grid')
 }
 
 let resizer = new IntersectionObserver((entries) => {
@@ -26,5 +25,31 @@ let resizer = new IntersectionObserver((entries) => {
     shrinkAtTop()
   }
 })
-
 resizer.observe(intersect)
+
+
+let quoteToGrid = new IntersectionObserver((entries) => {
+  const [ el ] = entries
+  if (!el.isIntersecting) {
+    quote.style.position = 'fixed'
+    quote.style.bottom = '91%'
+    quote.style.right = '4%'
+    quote.style.fontSize = '4.5px'
+    quote.style.zIndex = '2'
+    quote.style.animation = 'none';
+    quote.offsetHeight; /* trigger reflow */
+    quote.style.animation = 'slide-from-right .5s';
+  }
+  else {
+    quote.style.position = ''
+    quote.style.bottom = ''
+    quote.style.zIndex = ''
+    quote.style.right = ''
+    quote.style.fontSize = ''
+    quote.style.animation = 'none';
+    quote.offsetHeight; /* trigger reflow */
+    quote.style.animation = 'pop-in .5s';
+  }
+})
+
+quoteToGrid.observe(greeting)
