@@ -1,20 +1,25 @@
 let nav = document.getElementById('nav')
 let logo = document.getElementById('logo')
-let navItems = document.getElementById('nav-items')
+let navLinks = document.getElementById('nav-links')
 let greeting = document.getElementById('greeting')
 let quote = document.getElementById('quote')
 
 let intersect = document.getElementById('intersection-point')
 
+navLinks.children[0].style.gridArea = 'Home'
+navLinks.children[1].style.gridArea = 'Pricing'
+navLinks.children[2].style.gridArea = 'About'
+
 let shrinkAtTop = _ => {
   nav.classList.replace('nav', 'nav-shrunk')
   logo.classList.replace('logo', 'logo-shrunk')
+  navLinks.classList.replace('nav-links', 'nav-links-shrunk')
 }
-
 
 let revertAtTop = _ => {
   nav.classList.replace('nav-shrunk', 'nav')
   logo.classList.replace('logo-shrunk', 'logo')
+  navLinks.classList.replace('nav-links-shrunk', 'nav-links')
 }
 
 let resizer = new IntersectionObserver((entries) => {

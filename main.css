@@ -57,14 +57,30 @@ body{
   transition: .75s;
 }
 
-#nav-items ul {
-  list-style: none;
-  display: inline;
+#nav-links {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 2.375em;
+  align-items: center;
+  text-align: center;
+  font-size: 5px;
+  grid-template-areas: ". Home Pricing About";
+  transition: .75s;
 }
-#nav-items ul li{
-  width: 10%;
-  margin: 0;
-  font-size: 12px;
+.nav-links{
+  top: 35%;
+}
+.nav-links-shrunk{
+  top: 4%;
+}
+
+#nav-links a {
+  text-decoration: none;
+  font-variant: small-caps;
+  font-weight: 400;
+  color: #82a7b5;
 }
 
 
@@ -177,13 +193,35 @@ body{
 /* ---------------------Products----------------------- */
 
 #products {
-
+  margin-top: 15.5vh;
+  height: 90vh;
+  background-color: #08495c;
+}
+#products h2 {
+  font-size: .5em;
+  font-variant: small-caps;
+  color: #749999;
+  text-align: center;
+  padding-top: 5vh;
 }
 
 
 #product-grid {
   margin: 0 auto;
   display: grid;
-  grid-template: repeat(3, 25vh) / repeat(2, 35vh);
-  grid-gap: 3vh;
+  grid-template: repeat(2, 25vh) / repeat(2, 35vh);
+  grid-gap: 10vh;
+  justify-content: center;
+  align-content: center;
+}
+
+#product-grid div img {
+  width: 35vh;
+}
+
+.product-grid-item p {
+  font-size: .3em;
+  margin: 0;
+  text-align: center;
+  font-variant: small-caps;
 }
