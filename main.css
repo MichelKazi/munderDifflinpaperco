@@ -22,7 +22,6 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
   border-radius: 20px;
-
 }
 
 body{
@@ -278,7 +277,7 @@ body{
 footer {
   font-size: 66%;
   width: 75vw;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 
 .footer-grid {
