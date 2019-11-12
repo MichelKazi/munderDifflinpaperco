@@ -33,6 +33,14 @@ body{
   color: #fff;
 }
 
+#tear1, #torneffect {
+  margin: 0;
+  transform: translateY(-5px);
+  width: 100%;
+}
+#torneffect {
+}
+
 #intersection-point {
   position: absolute;
   height: 1px;
@@ -50,7 +58,7 @@ body{
   width:100%;
   background-color: var(--navColor);
   transition: .75s;
-  z-index: 0;
+  z-index: 2;
 }
 /* Shrunk Navbar */
 .nav-shrunk {
@@ -62,9 +70,11 @@ body{
   background-color: var(--navColor);
   box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.36);
   transition: .75s;
+  z-index: 2;
 }
 
 #nav-links {
+  z-index: 4;
   position: fixed;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -207,10 +217,8 @@ body{
 
 #products {
   margin-top: 24vh;
-  height: 90vh;
   background-color: var(--altBG);
   color: var(--textDark);
-  box-shadow: 6px 13px 33px 1px rgba(0,0,0,0.66);
 }
 #products h2, #staff h2 {
   font-variant: small-caps;
@@ -231,7 +239,6 @@ body{
 
 .product-grid-item img {
   width: 35vh;
-  box-shadow: 6px 13px 33px 1px rgba(0,0,0,0.66);
   transition: .75s;
 }
 
@@ -250,7 +257,7 @@ body{
 /* ---------------------Staff---------------------- */
 
 #staff #staff-container{
-  height: 90vh;
+  height: 110vh;
   background-color: #08495c;
 }
 
