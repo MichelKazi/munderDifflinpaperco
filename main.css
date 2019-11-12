@@ -80,9 +80,12 @@ body{
   font-variant: small-caps;
   font-weight: 400;
   color: #82a7b5;
+  transition: .25s;
 }
 
-
+#nav-links a:hover {
+  color: #fff;
+}
 
 
 /* Logo */
@@ -222,6 +225,7 @@ body{
 
 /* Footer */
 footer {
+  font-size: 66%;
   width: 75vw;
   margin: 0 auto;
 }
@@ -229,6 +233,7 @@ footer {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 20vw);
+  grid-gap: 4%;
 }
 
 .footer-col p{
