@@ -64,7 +64,7 @@ body{
   grid-gap: 2.375em;
   align-items: center;
   text-align: center;
-  font-size: 5px;
+  font-size: 1em;
   grid-template-areas: ". Home Pricing About";
   transition: .75s;
 }
@@ -83,16 +83,6 @@ body{
 }
 
 
-/* Nav button */
-.nav-btn{
-  z-index: -2;
-  width: fit-content;
-  margin: 1%;
-  border: .25px solid #be023d;
-  border-radius: 7px;
-  color: #7aadbb;
-  font-size: 7px;
-}
 
 
 /* Logo */
@@ -129,16 +119,24 @@ body{
   display: block;
   border: .5px solid #233542;
   border-radius: 2.5px;
-  font-size: .2em;
+  font-size: 1.25em;
   box-sizing: border-box;
   text-align: center;
 }
 
+
+
 #quote  {
+  z-index: -2;
+  width: fit-content;
+  margin: 1%;
+  border: .25px solid #be023d;
+  border-radius: 7px;
+  color: #7aadbb;
   background-color: #be023d;
   display: block;
   margin-right: auto;
-  font-size: .2em;
+  font-size: 1.25em;
   transition: .7s;
   outline: none;
 }
@@ -180,24 +178,22 @@ body{
 }
 
 #greeting h1{
-  font-size: .55em;
+  font-size: 1.525em;
   margin: 0 auto;
 }
 
 #greeting #disc {
   padding: 2.5vh;
-  font-size: .3em;
 }
 
 /* ---------------------Products----------------------- */
 
 #products {
-  margin-top: 15.5vh;
+  margin-top: 24vh;
   height: 90vh;
   background-color: #08495c;
 }
 #products h2 {
-  font-size: .5em;
   font-variant: small-caps;
   color: #749999;
   text-align: center;
@@ -219,7 +215,6 @@ body{
 }
 
 .product-grid-item p {
-  font-size: .3em;
   margin: 0;
   text-align: center;
   font-variant: small-caps;

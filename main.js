@@ -45,7 +45,6 @@ let quoteToGrid = new IntersectionObserver((entries) => {
     quote.style.position = 'fixed'
     quote.style.top = '1%'
     quote.style.right = '13%'
-    quote.style.fontSize = '.2em'
     quote.style.zIndex = '2'
     quote.style.backgroundColor = 'transparent'
     quote.style.animation = 'none';
