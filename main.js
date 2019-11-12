@@ -26,8 +26,10 @@ let resizer = new IntersectionObserver((entries) => {
   const [ el ] = entries
   if (el.isIntersecting) {
     revertAtTop()
+    //console.log("intersection point is in the viewport!");
   } else {
     shrinkAtTop()
+    //console.log("intersection point is not in the viewport!");
   }
 })
 resizer.observe(intersect)

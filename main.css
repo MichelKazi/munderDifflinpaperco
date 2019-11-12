@@ -196,7 +196,7 @@ body{
   height: 90vh;
   background-color: #08495c;
 }
-#products h2 {
+#products h2, #staff h2 {
   font-variant: small-caps;
   color: #749999;
   text-align: center;
@@ -223,7 +223,68 @@ body{
   font-variant: small-caps;
 }
 
-/* Footer */
+/* ---------------------Staff---------------------- */
+
+#staff #staff-container{
+  height: 90vh;
+  background-color: #08495c;
+}
+
+#staff p {
+  margin: 10px auto 0;
+  width: 55vw;
+}
+
+.paper {
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  position: relative;
+  height: 50vh;
+  width: 55vw;
+  z-index: -3;
+}
+#staff img{
+  position: absolute;
+  z-index: 0;
+  margin: auto;
+  width: 53vw;
+  transform: rotate(-2deg);
+  margin-left: 2.5%;
+}
+
+.paper,
+.paper::before,
+.paper::after {
+  /* Styles to distinguish sheets from one another */
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #bbb;
+}
+
+.paper::before,
+.paper::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 56vw;
+  background-color: #eee;
+}
+
+.paper::before {
+  top: 0;
+  transform: rotate(-2deg);
+  z-index: -9;
+}
+
+.paper::after {
+  top: 5px;
+  left: 5px;
+  transform: rotate(2deg);
+  z-index: -10;
+}
+
+
+/* ---------------------Footer--------------------- */
 footer {
   font-size: 66%;
   width: 75vw;
@@ -233,7 +294,6 @@ footer {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 20vw);
-  grid-gap: 4%;
 }
 
 .footer-col p{
