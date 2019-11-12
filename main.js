@@ -34,12 +34,6 @@ let resizer = new IntersectionObserver((entries) => {
 })
 resizer.observe(intersect)
 
-quote.addEventListener('mouseover', _ => {
-  quote.style.backgroundColor = '#be023d'
-})
-quote.addEventListener('mouseout', _ => {
-  quote.style.backgroundColor = 'transparent'
-})
 
 let quoteToGrid = new IntersectionObserver((entries) => {
   const [ el ] = entries
@@ -48,7 +42,6 @@ let quoteToGrid = new IntersectionObserver((entries) => {
     quote.style.top = '1%'
     quote.style.right = '13%'
     quote.style.zIndex = '2'
-    quote.style.backgroundColor = 'transparent'
     quote.style.animation = 'none';
     quote.offsetHeight; /* trigger reflow */
     quote.style.animation = 'slide-from-right .63s';

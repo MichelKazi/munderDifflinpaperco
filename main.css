@@ -1,3 +1,11 @@
+:root {
+  --navColor: #043442;
+  --mainBG: #576e74;
+  --altBG: #8bacb6;
+  --textDark: #0c2232;
+  --textLight: #c9d7f2;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,7 +29,7 @@ body{
   margin: 0;
   transition: .75s;
   font-family: 'open sans';
-  background-color: #02252f;
+  background-color: var(--mainBG);
   color: #fff;
 }
 
@@ -40,7 +48,7 @@ body{
   left: 0;
   height: 40vh;
   width:100%;
-  background-color: #043442;
+  background-color: var(--navColor);
   transition: .75s;
   z-index: 0;
 }
@@ -51,7 +59,7 @@ body{
   left: 0;
   height: 10vh;
   width:100%;
-  background-color: #043442;
+  background-color: var(--navColor);
   box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.36);
   transition: .75s;
 }
@@ -108,7 +116,7 @@ body{
 /* -------------------Homepage----------------- */
 /* Buttons */
 #quote-box {
-  margin: 0 auto;
+  margin: 3% auto 0;
   padding-bottom: 3.33vh;
 }
 #quote-box div {
@@ -127,15 +135,21 @@ body{
   text-align: center;
 }
 
-
-
+#torn-paper {
+  position: absolute;
+  height: 24%;
+  width: 34%;
+  top: 71%;
+  left: 33%;
+  z-index: -2;
+}
 #quote  {
   z-index: -2;
   width: fit-content;
   margin: 1%;
   border: .25px solid #be023d;
   border-radius: 7px;
-  color: #7aadbb;
+  color: var(--textLight);
   background-color: #be023d;
   display: block;
   margin-right: auto;
@@ -145,9 +159,8 @@ body{
 }
 
 #quote:hover {
-  background-color: #be023d;
+  background-color: #ff0000;
 }
-
 .quote-anim {
   animation: pop-in 0.5s;
 }
@@ -178,6 +191,7 @@ body{
   width: 75vw;
   margin: 59vh auto 0;
   text-align: center;
+  color: var(--textDark);
 }
 
 #greeting h1{
@@ -194,13 +208,15 @@ body{
 #products {
   margin-top: 24vh;
   height: 90vh;
-  background-color: #08495c;
+  background-color: var(--altBG);
+  color: var(--textDark);
+  box-shadow: 6px 13px 33px 1px rgba(0,0,0,0.66);
 }
 #products h2, #staff h2 {
   font-variant: small-caps;
-  color: #749999;
   text-align: center;
   padding-top: 5vh;
+  margin-top: 0;
 }
 
 
@@ -213,9 +229,17 @@ body{
   align-content: center;
 }
 
-#product-grid div img {
+.product-grid-item img {
   width: 35vh;
+  box-shadow: 6px 13px 33px 1px rgba(0,0,0,0.66);
+  transition: .75s;
 }
+
+.product-grid-item {
+  transition: .75s;
+}
+
+
 
 .product-grid-item p {
   margin: 0;
@@ -231,56 +255,15 @@ body{
 }
 
 #staff p {
+  text-align: center;
+  width: 55vw;
   margin: 10px auto 0;
-  width: 55vw;
 }
 
-.paper {
+#the-team{
+  display: block;
   margin: 0 auto;
-  background: #fff;
-  padding: 30px;
-  position: relative;
-  height: 50vh;
-  width: 55vw;
-  z-index: -3;
-}
-#staff img{
-  position: absolute;
-  z-index: 0;
-  margin: auto;
-  width: 53vw;
-  transform: rotate(-2deg);
-  margin-left: 2.5%;
-}
-
-.paper,
-.paper::before,
-.paper::after {
-  /* Styles to distinguish sheets from one another */
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
-  border: 1px solid #bbb;
-}
-
-.paper::before,
-.paper::after {
-  content: "";
-  position: absolute;
-  height: 95%;
-  width: 56vw;
-  background-color: #eee;
-}
-
-.paper::before {
-  top: 0;
-  transform: rotate(-2deg);
-  z-index: -9;
-}
-
-.paper::after {
-  top: 5px;
-  left: 5px;
-  transform: rotate(2deg);
-  z-index: -10;
+  box-shadow: 6px 13px 33px 1px rgba(0,0,0,0.66);
 }
 
 
@@ -304,6 +287,6 @@ footer {
 }
 
 #copyright {
-  margin-top: 5%;
+  margin-top: 2%;
   font-size: .75em;
 }
